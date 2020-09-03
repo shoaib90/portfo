@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>QUEST</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="static/assets/css/main.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+      rel="stylesheet"
+    />
+    <noscript
+      ><link rel="stylesheet" href="static/assets/css/noscript.css"
+    /></noscript>
+
+    <style>
+      #anim-container {
+        color: #999;
+        text-transform: uppercase;
+        font-size: 36px;
+        font-weight: bold;
+        padding-top: 200px;
+        position: relative;
+        width: 100%;
+        bottom: 200%;
+        right: 0%;
+        top: 50%;
+        /* display: block; */
+      }
+
+      #flip {
+        height: 50px;
+        overflow: hidden;
+      }
+
+      #flip > div > div {
+        color: #fff;
+        padding: 0px 12px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: inline-block;
+      }
+
+      #flip div:first-child {
+        animation: show 5s linear infinite;
+      }
+
+      #flip div div {
+        background: #42c58a;
+      }
+      #flip div:first-child div {
+        background: #4ec7f3;
+      }
+      #flip div:last-child div {
+        background: #dc143c;
+      }
+
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .left_corner {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 50px;
+      }
+
+      .animatespan {
+        display: inline-block;
+      }
+
+      h3 span {
+        color: white;
+        font: bold 24px/45px Helvetica, Sans-Serif;
+        letter-spacing: -1px;
+        background: rgb(0, 0, 0); /* fallback color */
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+      }
+
+      .subhead::before {
+        content: "/ ";
+        display: inline-block;
+        right: 1.15rem;
+        position: relative;
+      }
+
+      .content:after {
+        content: "";
+        background-color: #fff;
+        position: absolute;
+        width: 5px;
+        height: 100px;
+        top: 10px;
+        left: 117%;
+        display: block;
+      }
+
+      .content h2 + p::before {
+        content: "";
+        display: block;
+        width: 3.5rem;
+        height: 1px;
+        background-color: #4f79f1;
+        position: absolute;
+        left: 3.25rem;
+        top: 6.45rem;
+      }
+
+      @keyframes show {
+        0% {
+          margin-top: -270px;
+        }
+        5% {
+          margin-top: -180px;
+        }
+        33% {
+          margin-top: -180px;
+        }
+        38% {
+          margin-top: -90px;
+        }
+        66% {
+          margin-top: -90px;
+        }
+        71% {
+          margin-top: 0px;
+        }
+        99.99% {
+          margin-top: 0px;
+        }
+        100% {
+          margin-top: -270px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <h1>QUEST</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#one">What I Do</a></li>
+          <li><a href="#two">Who I Am</a></li>
+          <li><a href="#work">My Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen">
+      <div class="content" style="margin-left: 75px">
+        <h2 style="font-family: Expletus Sans">Shoaib Khan</h2>
+
+        <p style="font-family: Titillium Web">Developer & Content Creator</p>
+      </div>
+      <a href="#one" class="button style2 down anchored">More</a>
+
+      <div id="anim-container">
+        <div class="centered">
+          Make
+          <div id="flip">
+            <div><div>wOrK</div></div>
+            <div><div>lifeStyle</div></div>
+            <div><div>Everything</div></div>
+          </div>
+          AweSoMe!
+        </div>
+      </div>
+    </section>
+
+    <!-- One -->
+    <section id="one" class="main style2 right dark fullscreen">
+      <div class="content box style2">
+        <header>
+          <h2>What I Do</h2>
+        </header>
+        <p style="font-size: 110%" style="color: #39454b">
+          I think everyone in this world has a story to tell, I try to bring
+          that story to real life infront of masses through coding and creating
+          content.
+        </p>
+      </div>
+      <a href="#two" class="button style2 down anchored">Next</a>
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="main style2 left dark fullscreen">
+      <div class="content box style2">
+        <header>
+          <h2>Who I Am</h2>
+        </header>
+        <p>
+          I am a <b>Full Stack Developer</b> from Gandhinagar, India. I focus on
+          bringing up the story behind everything that a brand resembles while
+          also taking care of business needs.
+        </p>
+        <p>
+          When I am not writing code, I am majorly involve in content creation
+          around life in general either through my videos or podcast. I also
+          like reading books while exploring other fields like psychology,
+          health, and entrepreneurship.
+        </p>
+      </div>
+      <a href="#work" class="button style2 down anchored">Next</a>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="main style3 primary" style="color: #39454b">
+      <div class="content">
+        <header>
+          <h2>My Work</h2>
+        </header>
+
+        <!-- Gallery  -->
+        <div class="gallery">
+          <article class="from-left">
+            <a
+              href="https://github.com/shoaib90"
+              title="The Password Checker"
+              class="image fit"
+            >
+              <img src="static/images/thumbs/password.jpg" alt="" />
+            </a>
+            <div class="centered">
+              <a href="https://github.com/shoaib90"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Password Checker
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+          <article class="from-right">
+            <a href="https://github.com/shoaib90" class="image fit"
+              ><img
+                src="static/images/thumbs/twitter_bot.jpg"
+                title="Twitter BOT"
+                alt=""
+            /></a>
+            <div class="centered">
+              <a href="https://github.com/shoaib90"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Twitter Bot
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+          <article class="from-left">
+            <a href="https://github.com/shoaib90" class="image fit"
+              ><img
+                src="static/images/thumbs/plagiarism.png"
+                title="Plagiarism Checker"
+                alt=""
+            /></a>
+            <div class="centered">
+              <a href="https://github.com/shoaib90"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Plagiarism Checker
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+          <article class="from-right">
+            <a href="https://github.com/shoaib90" class="image fit"
+              ><img
+                src="static/images/thumbs/web_crawler.jpg"
+                title="Web Crawler"
+                alt=""
+            /></a>
+            <div class="centered">
+              <a href="https://github.com/shoaib90"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Web Crawler - LinkedIn & Twitter
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+          <article class="from-left">
+            <a href="https://anchor.fm/shoaib-khan11" class="image fit"
+              ><img
+                src="static/images/thumbs/podcast.jpg"
+                title="Podcast"
+                alt=""
+            /></a>
+            <div class="centered">
+              <a href="https://anchor.fm/shoaib-khan11"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Podcast
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+          <article class="from-right">
+            <a href="" class="image fit"
+              ><img
+                src="static/images/thumbs/youtube.jpg"
+                title="Podcast"
+                alt=""
+            /></a>
+            <div class="centered">
+              <a
+                href="https://www.youtube.com/channel/UCA_HPT4YwPTlanu9Fz0Igag?view_as=subscriber"
+                ><h3 style="color: darkgray">
+                  <span class="animated pulse infinite animatespan">
+                    Youtube
+                  </span>
+                </h3>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="main style3 secondary">
+      <div class="content">
+        <header>
+          <h2>Say Hello.</h2>
+          <p style="color: #ffffff">
+            Always looking for oppurtunities to meet new people and work on
+            awesome projects. Let's make one more story together.
+          </p>
+        </header>
+        <div class="box">
+          <form method="post" action="submit_form">
+            <div class="fields">
+              <div class="field half">
+                <input type="text" name="name" placeholder="Name" />
+              </div>
+              <div class="field half">
+                <input type="email" name="email" placeholder="Email" />
+              </div>
+              <div class="field">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows="6"
+                ></textarea>
+              </div>
+            </div>
+            <ul class="actions special">
+              <li><input type="submit" value="Send Message" /></li>
+            </ul>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <!-- <footer id="footer"> -->
+      <!-- Icons -->
+      <div class="left_corner">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://twitter.com/iam_shoaib14"
+              class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/shoaib.khan.1402/"
+              class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/itsshoaib_14/"
+              class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/shoaib-khan-4010b0134/"
+              class="icon brands fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/shoaib90" class="icon brands fa-github"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:shoaibkhanme3412@gmail.com"
+              class="icon fa-envelope"
+            >
+              <!-- <span class="label">Email</span> -->
+            </a>
+          </li>
+          <!-- <li>
+          <a href="#" class="icon brands fa-pinterest"
+            ><span class="label">Pinterest</span></a
+          >
+        </li> -->
+        </ul>
+      </div>
+    </section>
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/jquery.poptrox.min.js"></script>
+    <script src="static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="static/assets/js/browser.min.js"></script>
+    <script src="static/assets/js/breakpoints.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
+  </body>
+</html>
